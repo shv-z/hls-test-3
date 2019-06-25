@@ -1,0 +1,598 @@
+.header
+  width: 100%
+  height: $header-height
+  padding-right: 14.5rem
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-items: center
+  flex-wrap: nowrap
+  z-index: 700
+  +r($large)
+    padding-right: 6rem
+  +r($medium)
+    padding-right: 3rem
+
+  &__buttons
+    white-space: nowrap
+    width: 52.6rem
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+
+  &__button:not(:last-child)
+    margin-right: 3rem
+
+.stellium-logo
+  width: 17.4rem
+  min-width: 12.8rem
+  height: 3.4rem
+  margin: 0
+  cursor: default
+  svg
+    .sidebar__logo-text
+      fill: #fff
+
+  &_header
+    position: absolute
+    left: 11.5rem
+    top: 6rem
+    z-index: 800
+
+  & > img
+    width: 100%
+    height: auto
+
+.main
+  width: 100%
+  position: relative
+  min-height: 100vh
+
+.section
+  width: 100%
+  position: relative
+  display: flex
+  flex-direction: column
+  padding: 4rem 14.5rem 5.5rem
+  &_full
+    min-height: 100vh
+  &.top
+    padding-top: 0
+    height: 100vh
+    min-height: 57.5rem
+    background-image: linear-gradient(135deg, #0421ab 0%, #00d9ff 100%)
+    +r($large)
+      padding-right: 6rem
+    +r($medium)
+      padding-right: 3rem
+  &.advantages
+    padding: 0
+    min-height: 100vh
+    justify-content: center
+    background-image: linear-gradient(-45deg, #{$color-dark-blue-features} 0%, #032a59 100%)
+  &.features
+    background-image: linear-gradient(135deg, $color-green 0%, #03ab69 100%)
+    padding: 4rem 0 5.5rem
+  &.extras
+    background-color: #f4fcff
+
+.top-img
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 10
+  top: 0
+  left: 0
+  overflow: hidden
+  &__img
+    height: 100%
+    width: 100%
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    &_main
+      width: 70%
+      height: 69%
+      top: 18%
+      left: -10%
+      background: url('/img/main-img.png') center center / contain no-repeat
+      z-index: 12
+    &_w
+      width: 114%
+      height: 106%
+      left: -42%
+      background: url('/img/main-img-w.svg') center center / 100% 100% no-repeat
+      z-index: 11
+    &_w2
+      width: 114%
+      height: 106%
+      left: 45%
+      top: -5%
+      background: url('/img/main-img-w.svg') center center / 100% 100% no-repeat
+      z-index: 11
+  &__text
+    height: 7.6rem
+    line-height: 3.8rem
+    font-size: 3.2rem
+    position: absolute
+    bottom: 10%
+    z-index: 22
+    width: 60rem
+    text-align: center
+    margin: 0 6rem 0 12.2rem
+.content
+
+  &_top
+    position: relative
+    align-self: flex-end
+    width: 52.6rem
+    height: 100%
+    padding-top: 6.8%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    z-index: 100
+
+  &_advantages
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+.title
+  margin: 0
+  cursor: default
+
+  &_lg
+    font-size: 4.1rem
+    line-height: 4.9rem
+    height: 4.9rem
+    white-space: nowrap
+
+  &_sub
+    font-size: 4.7rem
+    height: 5.6rem
+    line-height: 5.6rem
+    margin-top: -.9rem
+
+  &_logo
+    width: 21.3rem
+    height: 21.3rem
+    display: block
+    margin: 4.2rem 7rem 5.4rem
+
+  &_sm
+    font-size: 3.2rem
+    line-height: 3.8rem
+    height: 3.8rem
+
+  &_light
+    font-weight: 300
+
+.btn
+  width: 21.2rem
+  height: 6.2rem
+  min-height: 6.2rem
+  margin: 5.7rem 8.2rem 0 7rem
+  background-image: linear-gradient(-45deg, #e1e1e1 0%, #ffffff 100%)
+  color: #dd0302
+  font-size: 2.8rem
+  border: none
+  padding: 2rem 5.7rem 2rem 4.7rem
+  &:hover
+    background-image: linear-gradient(-45deg, #e1e1e1 0%, #ffffff 100%)
+    color: #dd0302
+  &__text
+    position: relative
+    display: inline-block
+    top: -.2rem
+    white-space: nowrap
+    padding-right: 2.8rem
+    .play
+      position: absolute
+      right: 0
+      top: .4rem
+      box-sizing: border-box
+      height: 1.6rem
+      width: 0
+      border-color: transparent transparent transparent #dd0302
+      border-style: solid
+      border-width: .9rem 0 .9rem 1.6rem
+      &.playing
+        border-color: #dd0302
+        border-width: 0.6rem 0 0.6rem 1.6rem
+        top: .6rem
+
+  &_md
+    font-size: 4.8rem
+
+  &_center
+    text-align: center
+
+  &_black
+    color: $color-black
+
+.advantages__title
+  line-height: 7.7rem
+  height: 7.7rem
+  white-space: nowrap
+
+.advantages-container
+  padding: 4rem 9.5rem 2.8rem 8.5rem
+
+  .source
+    margin-top: 2.7rem
+    opacity: .3
+    font-size: 1.2rem
+    height: 1.4rem
+    line-height: 1.4rem
+
+.advantage
+  width: 100%
+  padding-top: 5.4rem
+
+  &:first-child
+    padding-top: 0
+
+  &__title
+    font-size: 2rem
+    line-height: 2.4rem
+    color: #2eff7f
+    max-width: 90%
+
+  &__indicators
+    width: 100%
+    height: 100%
+    padding-top: .4rem
+
+    .indicator
+      padding-top: .8rem
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+
+      &__percentage
+        font-size: 2.8rem
+        line-height: 3.3rem
+        height: 3.3rem
+        font-weight: 300
+        width: 7.8rem
+
+      &__text
+        font-size: 1.6rem
+        height: 3.2rem
+        font-weight: 300
+        padding-left: 1.9rem
+        display: flex
+        align-items: center
+
+.sampleset-link-container
+  min-width: 69.5rem
+  padding: 4rem 0 7.2rem 14%
+  +r($large)
+    padding: 4rem 2.5rem 7.2rem 8%
+
+.sampleset-link
+  display: flex
+  flex-direction: row
+  align-items: center
+  padding: 2.25rem 5rem 2.25rem 0
+  border-bottom: 1px solid #002c76
+  cursor: pointer
+
+  &:hover
+    .sampleset-link__caption
+      color: $color-white
+    .play-pause
+      border-color: transparent transparent transparent #fff
+
+  &:last-child
+    border-bottom: none
+
+  &__button-wrapper
+    position: relative
+    width: 36px
+    height: 36px
+    min-height: 36px
+    min-width: 36px
+    cursor: pointer
+    +r($xlarge)
+      width: 32px
+      height: 32px
+      min-height: 32px
+      min-width: 32px
+    +r($large)
+      width: 28px
+      height: 28px
+      min-height: 28px
+      min-width: 28px
+    +r($medium)
+      width: 24px
+      height: 24px
+      min-height: 24px
+      min-width: 24px
+
+  .radial-progress-container
+    position: absolute
+    top: -1px
+    left: -1px
+    z-index: 170
+
+  &__button
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    background: #0f366e
+    position: absolute
+    z-index: 160
+
+    .play-pause
+      box-sizing: border-box
+      height: 1.2rem
+      width: 0
+      border-color: transparent transparent transparent #61b7ff
+      transition: .1s all ease
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+      border-style: solid
+      border-width: .6rem 0 .6rem 1rem
+      left: calc(50% + 1px)
+    &.playing
+      border-style: double
+      border-width: 0 0 0 .8rem
+      left: 50%
+
+  &__caption
+    padding-left: 2.6rem
+    font-size: 2.2rem
+    height: 2.2rem
+    line-height: 2.2rem
+    color: $color-light-blue
+    white-space: nowrap
+
+.features
+  .title
+    height: 7.7rem
+    line-height: 7.7rem
+
+.features-container
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 83%
+  margin: 3.2rem auto 0
+  +r($medium)
+    width: 92%
+
+.feature
+  margin: 5rem 2.2rem 5rem 0
+  width: calc(25% - (6.6rem / 4))
+  text-align: center
+
+  &:nth-child(4n)
+    margin: 5rem 0
+
+  &__img
+    width: 6.8rem
+    height: 6.8rem
+    margin: 2rem auto
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+
+    img
+      width: 100%
+      height: 100%
+
+  &__title
+    font-size: 2.2rem
+    line-height: 2.2rem
+    margin: 1.3rem auto .9rem
+
+  &__description
+    font-size: 1.6rem
+    line-height: 2.2rem
+
+.features__btn
+  text-align: center
+  margin-top: 1rem
+
+.footer
+  width: 100%
+  height: 20rem
+  background: #282828
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  padding: 3.5rem 11.5rem
+
+  &-col
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    &_w
+      width: 70%
+
+  &__caption, &__caption > a
+    font-size: 1.4rem
+    line-height: 1.8rem
+    font-weight: 300
+
+  &__cookies
+    font-size: 1.1rem
+    line-height: 1.3rem
+    font-weight: 300
+    color: #767676
+
+    a
+      color: inherit
+      font-weight: inherit
+      text-decoration: underline
+
+      &:hover
+        text-decoration: none
+
+  &__email
+    text-transform: uppercase
+
+.samples-popup
+  width: 65%
+  min-height: 43rem
+  padding: 1.7rem 4.8rem 3.4rem
+  min-width: 80rem
+  +r($large)
+    width: 72%
+  +r($medium)
+    width: 80%
+
+  &__title
+    font-size: 3.6rem
+    height: 8.4rem
+    line-height: 7rem
+    color: #23282a
+
+  & .popup__close
+    position: absolute
+    right: 4.8rem
+    top: 4.8rem
+    width: 1.8rem
+    height: 1.8rem
+    cursor: pointer
+    background: url("/img/cross@2x.png") center center / contain no-repeat
+    +r($large)
+      width: 1.6rem
+      height: 1.6rem
+
+  &__button-wrapper
+    text-align: center
+    margin: 4.6rem auto 0
+
+  &__button
+    padding: 1.2rem 5.7rem 1.3rem
+    font-size: 1.8rem
+
+    &:before, &:after
+      transition: none
+
+
+.sampleset-container
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: stretch
+  margin-top: .3rem
+
+  .sampleset
+    width: calc((100% - 3.2rem) / 3)
+    background-image: linear-gradient(135deg, #02c1f0 0%, #018edc 100%)
+    border-radius: .5rem
+    padding: 1.6rem 2rem 2.5rem
+
+    &__title
+      font-size: 1.8rem
+      height: 2.3rem
+      line-height: 2.3rem
+      margin-bottom: .8rem
+
+    .sample
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: center
+      padding: .75rem 0
+      cursor: pointer
+      user-select: none
+
+      &:hover
+        filter: brightness(1.2)
+
+      &__title
+        font-size: 1.4rem
+        letter-spacing: -0.039rem
+        height: 1.8rem
+        line-height: 1.8rem
+        margin-left: 1.8rem
+        @include text-overflow
+
+      &__button-wrapper
+        position: relative
+        width: 40px
+        height: 40px
+        min-height: 40px
+        min-width: 40px
+        cursor: pointer
+        +r($xlarge)
+          width: 36px
+          height: 36px
+          min-height: 36px
+          min-width: 36px
+        +r($large)
+          width: 32px
+          height: 32px
+          min-height: 32px
+          min-width: 32px
+        +r($medium)
+          width: 28px
+          height: 28px
+          min-height: 28px
+          min-width: 28px
+
+      .radial-progress-container
+        position: absolute
+        width: 100%
+        height: 100%
+        top: -1px
+        left: -1px
+        z-index: 170
+
+      &__button
+        width: 100%
+        height: 100%
+        background: rgba(255, 255, 255, .4)
+        border-radius: 50%
+        margin-left: .2rem
+        position: absolute
+        z-index: 160
+
+        .play-pause
+          height: 1.2rem
+          width: 0
+          border-color: transparent transparent transparent #fff
+          transition: .1s all ease
+          position: absolute
+          top: 50%
+          transform: translate(-50%, -50%)
+          border-style: solid
+          border-width: .6rem 0 .6rem 1rem
+          left: calc(50% + 1px)
+
+          &.playing
+            border-style: double
+            border-width: 0 0 0 .8rem
+            left: 50%
+
+
+.loader
+  height: 2rem
+  width: 2rem
+  background: url('/img/Path.svg') center center / contain no-repeat
+  position: absolute
+  right: 0
+  top: .2rem
+  animation: spin 2s linear infinite
+
+@keyframes spin
+  100%
+    transform: rotate(-360deg)

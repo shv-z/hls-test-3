@@ -1,0 +1,548 @@
+.player
+  height: $player-height
+  width: 100%
+  min-width: $min-width
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  padding-top: .6rem
+  background-color: $color-darker-blue
+  user-select: none
+  z-index: 900
+
+.progress
+  width: 100%
+  height: .6rem
+  background-color: $color-blue
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+
+  .vue-slider-disabled
+    opacity: 1
+    cursor: default
+
+  .vue-slider-rail
+    background-color: transparent
+
+  .vue-slider-process
+    background-color: $color-green
+    border-radius: 0
+
+.player__content
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  padding: 0 4.8rem
+
+.set
+  display: flex
+  flex-direction: row
+  width: 50%
+
+  &__logo
+    height: 4.8rem
+    width: 4.8rem
+    position: relative
+    overflow: hidden
+    border-radius: 1rem
+
+  &__logo img
+    height: 5rem
+    width: 5rem
+    position: absolute
+    top: -.1rem
+    left: -.1rem
+
+  &__info
+    height: 4.9rem
+    margin-left: 1.6rem
+    width: 100%
+    @include text-overflow
+
+.artist
+  font-size: 1rem
+  height: 1.3rem
+  line-height: 1.3rem
+  letter-spacing: -0.28px
+
+  &__set
+    opacity: .8
+    padding-right: 1rem
+    @include text-overflow
+
+  &__genre
+    font-size: 1.8rem
+    height: 2.3rem
+    line-height: 2.3rem
+    font-weight: 500
+    letter-spacing: -0.5px
+
+  &__track
+    opacity: .8
+
+.controls
+  min-width: 22.4rem
+  width: 22.4rem
+  height: 100%
+  min-height: 100%
+  position: relative
+  overflow: hidden
+
+  &:before
+    display: block
+    content: ''
+    position: absolute
+    height: 22.4rem
+    width: 22.4rem
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 11.2rem
+    background: $color-dark-blue
+    z-index: -1
+
+  &__buttons
+    display: flex
+    height: 100%
+    padding-top: .3rem
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+  &__button
+    height: 3.8rem
+    width: 3.8rem
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    border-radius: 50%
+
+    &:hover
+      background-color: rgba(255, 255, 255, .1)
+
+    &:active
+      background-color: rgba(255, 255, 255, .2)
+
+    &[disabled]
+      opacity: .25
+
+      &:hover, &:active
+        background-color: transparent
+
+    &_play-pause
+      margin: 0 .2rem
+      height: 6.6rem
+      width: 6.6rem
+
+      & > svg
+        width: 2.4rem
+        height: 2.7rem
+        position: relative
+        left: .35rem
+
+        &.svg-pause
+          display: none
+          left: 0
+          top: -.1rem
+          width: 5.4rem
+          height: 6.0rem
+
+      &.playing
+
+        & > svg.svg-play
+          display: none
+
+        & > svg.svg-pause
+          display: inline
+
+    &_prev > svg, &_next > svg
+      width: 1.4rem
+      height: 1.3rem
+
+.options
+  width: 50%
+  height: 100%
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  align-items: center
+
+  &__option
+    width: 33.33%
+    display: flex
+    flex-direction: row
+
+    &_time
+      justify-content: flex-start
+
+      .time
+        margin-left: 4rem
+        height: 1.8rem
+        line-height: 1.8rem
+        font-size: 1.4rem
+        letter-spacing: -0.039rem
+        font-family: 'Open Sans', sans-serif
+
+    &_queue
+      justify-content: center
+
+      .queue-button
+        width: 5.5rem
+        height: 5.5rem
+        cursor: pointer
+        border-radius: 50%
+
+        &:hover
+          background-color: rgba(255, 255, 255, .1)
+
+        &:active
+          background-color: rgba(255, 255, 255, .14)
+
+        & > svg
+          position: relative
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          stroke: $color-white
+
+        &_active > svg
+          fill: $color-green
+          stroke: $color-green
+
+
+    &_volume
+      justify-content: flex-end
+
+      .volume
+        width: 14.4rem
+        height: 1.6rem
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+        &__button
+          padding: .3rem 1rem 0 0
+          cursor: pointer
+          width: 1.5rem
+          height: 50%
+          margin-right: 1.3rem
+
+          & svg
+            height: 1.5rem
+            width: 1.6rem
+
+          .muted
+            display: none
+            position: relative
+            top: -1px
+            height: 1.6rem
+            width: 1.7rem
+
+          &.muted
+            .non-muted
+              display: none
+            .muted
+              display: block
+
+        &__bar
+          width: 11.4rem
+          height: 100%
+
+          .vue-slider
+            cursor: pointer
+            display: flex
+            flex-direction: row
+            align-items: center
+
+            &-rail
+              height: .4rem
+              background: $color-blue
+
+            .vue-slider-process
+              background-color: $color-white
+
+            &-dot
+              display: none
+              &-tooltip
+                display: none
+
+            &:hover
+              .vue-slider-dot
+                display: block
+
+.player svg
+  fill: $color-white
+  fill-opacity: 1
+  cursor: pointer
+
+.queue
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: $player-height
+  background: #fff
+  padding: 4.8rem
+  overflow: auto
+
+  &__header
+    width: 100%
+    height: 5.6rem
+    line-height: 5.6rem
+    position: relative
+
+  &__title
+    color: $color-text-black
+    font-size: 4.6rem
+    height: 100%
+    line-height: 100%
+    font-weight: 500
+    letter-spacing: -0.153rem
+    padding-right: 5rem
+    @include text-overflow
+
+  &__close
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translate(0, -50%)
+    width: 3.2rem
+    height: 3.2rem
+    cursor: pointer
+    svg
+      width: 3.2rem
+      height: 3.2rem
+      path
+        fill: none
+        stroke: #23282a
+
+  &__body
+    width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    padding: .8rem 0
+
+    .queue-col
+
+      &_playlists
+        width: 33%
+
+      &_tracks
+        width: 67%
+
+      &_single
+        width: 100%
+
+      &__title
+        height: 3.2rem
+        line-height: 3.2rem
+        font-size: 2.6rem
+        color: $color-text-black
+
+        &_tracks
+          padding-left: 3.2rem
+
+      &__caption
+        height: 1.4rem
+        line-height: 1.4rem
+        color: #abbfc7
+        font-size: 1.2rem
+        font-weight: 700
+        text-transform: uppercase
+
+      .playing-now
+        border-bottom: 1px solid $color-border-lightgrey
+        padding: 1.2rem 0 0 3.2rem
+        margin-top: 1.2rem
+        height: 10rem
+
+        &_playlist
+          padding-left: 0
+          border-right: 1px solid $color-border-lightgrey
+
+      .playlist
+        position: relative
+        width: 100%
+        height: 4.8rem
+        margin: 1rem 0 1.5rem
+        display: flex
+        flex-direction: row
+        overflow: hidden
+        color: $color-text-black
+
+        &_active
+          color: $color-blue
+
+        &__img
+          width: 4.8rem
+          min-width: 4.8rem
+          height: 100%
+          border-radius: 1rem
+
+        &_active .playlist__img
+          border-radius: 1rem
+          border: 3px solid $color-blue
+
+        &__text
+          padding-left: 1.6rem
+          @include text-overflow
+
+        &__title
+          height: 3.2rem
+          line-height: 3.2rem
+          font-size: 2.6rem
+          position: relative
+          @include text-overflow
+          padding-right: 2rem
+
+        &__duration
+          height: 1.8rem
+          font-size: 1.4rem
+          letter-spacing: -0.039rem
+
+.playing-now .play-icon
+  content: ''
+  height: 0
+  width: 0
+  border-color: transparent transparent transparent $color-blue
+  align-self: center
+  position: relative
+  top: -.6rem
+  left: -1.2rem
+  border-style: solid
+  border-width: .6rem 0 .6rem 1rem
+
+  &_track
+    top: 0
+    left: 0.8rem
+    display: inline-block
+
+.track
+  color: $color-text-black
+  font-size: 1.4rem
+  height: 1.8rem
+  line-height: 1.8rem
+  letter-spacing: -0.039rem
+
+  &_active
+    color: $color-blue
+    font-size: 1.8rem
+    line-height: 2.3rem
+    letter-spacing: -0.05rem
+    display: flex
+    width: 100%
+    height: 7.4rem
+    align-items: center
+
+  &__text
+    display: flex
+    width: 100%
+    justify-content: space-between
+
+  &__title
+    position: relative
+    user-select: text
+    @include text-overflow
+    padding-right: 1rem
+
+.queued
+  padding-top: 1.5rem
+
+  &_playlists
+    border-right: 1px solid $color-border-lightgrey
+    height: 80%
+    min-height: 20vh
+
+  &_tracks
+    padding-left: 3.2rem
+
+    .queue-col__caption
+      padding-left: .6rem
+      margin-bottom: 1.5rem
+
+  &__track
+    height: 3rem
+    padding: .6rem
+    border-bottom: 1px solid $color-border-lightgrey
+
+    &:last-child
+      border-bottom: none
+
+.queue-arrow
+  position: absolute
+  z-index: 1
+  top: 0
+  width: 0
+  height: 0
+  border-style: solid
+  border-width: 2.5rem 2.5rem 0 2.5rem
+  border-color: #fff transparent transparent transparent
+
+
+#audio
+  display: none
+.dark .player
+  background: $color-dark-theme-blue
+
+  .progress .vue-slider-process
+    background: $color-white
+  .controls
+    &:before
+      background: #162f80
+  .queue-arrow
+    border-color: #001f54 transparent transparent transparent
+
+.dark .queue
+  background-color: #001f54
+  &__title
+    color: $color-white
+  &__close
+    svg
+      path
+        fill: none
+        stroke: $color-white
+  &-col
+    &__title
+      color: $color-white
+    &__caption
+      color: $color-text-dark-theme-lightblue
+      font-weight: 400
+  .track
+    &__title,
+    &__duration
+      color: $color-white
+  .playlist
+    &__title,
+    &__duration
+      color: $color-white
+  .playing-now
+    .track
+      &__title,
+      &__duration
+        color: $color-blue
+    .playlist
+      &__title,
+      &__duration
+        color: $color-blue
+  .queued
+    &__track
+      border-bottom: 1px solid $color-dark-theme-medium-dark-blue
+      &:last-child
+        border: none
+  .playing-now
+    border-bottom: 1px solid $color-dark-theme-medium-dark-blue
+    &_playlist
+      border-right: 1px solid $color-dark-theme-medium-dark-blue
+  .queued_playlists
+    border-right: 1px solid $color-dark-theme-medium-dark-blue
+
+

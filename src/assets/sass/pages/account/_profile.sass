@@ -1,0 +1,85 @@
+.profile
+    &__content
+      display: flex
+      justify-content: space-between
+      margin: -0.8rem
+      flex-wrap: wrap
+    
+    &__card
+      max-width: 50%
+      width: 100%
+      padding: 0.8rem
+    &__options
+      border-radius: 5px
+      background-color: #ffffff
+      width: 100%
+      height: 100%
+      color: #018edc
+      padding: 0 1.6rem
+    &__option
+      padding: 1.6rem 0
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      font-size: 14px
+      border-bottom: 1px solid #e6eef1
+
+      &:last-of-type
+        border: none
+      svg
+        margin-right: 1.6rem
+      h4
+        margin: 0
+      p
+        margin: 0
+        cursor: pointer
+        transition: 0.2s ease
+        &:hover
+          color: #1b399b
+
+    &__subscribe
+      border-radius: 5px
+      background-color: #ffffff
+      width: 100%
+      color: #23282a
+      display: flex
+      justify-content: space-between
+      padding: 1.6rem
+      &-right
+        text-align: right
+      &-title
+        margin-bottom: 1.6rem
+        h2
+          font-size: 2.6rem
+          margin: 0
+          margin-bottom: 0.8rem
+        h3
+          font-size: 1.4rem
+          margin: 0
+      &-price
+        font-size: 5.6rem
+      &-btn
+        position: relative
+        z-index: 2
+        font-size: 1.8rem
+        button
+          height: 4.8rem
+          padding: 1.3rem 5.7rem
+      &-end
+        font-size: 1.4rem
+        font-weight: 300
+      &-control
+        color: #018edc
+        font-size: 1.4rem
+
+.dark .profile
+  &__options
+    background: $color-dark-theme-blue
+  &__option
+    color: $color-white
+    border-bottom: 1px solid $color-dark-theme-medium-dark-blue
+  input:checked + .slider
+    background-color: $color-green
+  &__subscribe
+    background: $color-dark-theme-blue
+    color: $color-white

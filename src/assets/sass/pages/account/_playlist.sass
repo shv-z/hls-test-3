@@ -1,0 +1,124 @@
+.playlist
+  &__tags
+    display: flex
+    flex-wrap: wrap
+    &-item
+      font-size: 1rem
+      font-weight: 500
+      color: $color-white
+      letter-spacing: -0.028rem
+      height: 1.8rem
+      line-height: 2rem
+      border-radius: .9rem
+      background: $color-blue
+      padding: 0 1rem
+      margin: .8rem .4rem .8rem 0
+      text-transform: uppercase
+  &__card
+    display: flex
+    justify-content: flex-start
+    margin-bottom: 4.0rem
+    position: relative
+    &::after
+      position: absolute
+      content: ''
+      left: 0
+      width: 100%
+      bottom: -2rem
+      height: 1px
+      background: #e6eef1
+    &:hover
+      .playlist__play
+        opacity: 1
+  &__img-wr
+    position: relative
+    border-radius: 1.5rem
+    margin-right: 1.6rem
+    cursor: pointer
+    width: 12.8rem
+    height: 12.8rem
+    &::after
+      content: ''
+      border-radius: 1.5rem
+      background-color: #000000
+      z-index: 0
+      position: absolute
+      left: 0
+      bottom: 0
+      top: 0
+      right: 0
+      transition: 0.4s ease
+      opacity: 0
+    &:hover
+      &::after
+        opacity: 0.6
+      
+  &__img
+    width: 100%
+    height: 100%
+    img
+      display: block
+      object-fit: cover
+      border-radius: 1.5rem
+      width: 100%
+      height: 100%
+  &__play
+    position: absolute
+    z-index: 1
+    left: 50%
+    top: 50%
+    width: 7rem
+    height: 7rem
+    border-radius: 50%
+    background-image: linear-gradient(135deg, #02c1f0 0%, #018edc 100%)
+    transform: translate(-50%, -50%)
+    opacity: 0
+    transition: 0.4s ease
+    img,svg
+      position: absolute
+      left: 53%
+      top: 50%
+      transform: translate(-50%, -50%)
+      max-width: 2.2rem
+      path
+        fill: white
+  &__content
+    padding-right: 20%
+    position: relative
+    width: calc(100% - 12.8rem)
+    padding-top: .8rem
+  &__name
+    h2
+      margin: 0
+      color: $color-text-black
+      font-size: 2.6rem
+      margin-bottom: .8rem
+  &__text
+    p
+      margin: .8rem 0 1.6rem
+      color: $color-text-black
+      font-size: 1.5rem
+      font-weight: 300
+  &__time
+    h4
+      color: #a1b0b6
+      font-size: 1.4rem
+      font-weight: 500
+      margin: 0
+  &__add
+    position: absolute
+    right: 3.2rem
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+
+.dark .playlist
+  &__card
+    &:after
+      background: $color-dark-theme-light-bg-blue
+  &__time
+    h4
+      color: $color-text-dark-theme-lightblue
+  &__text
+    p
+      color: $color-white

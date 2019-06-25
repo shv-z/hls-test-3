@@ -1,0 +1,307 @@
+.search
+  &__panel
+    border-radius: 0.5rem
+    border: 2px solid #dee5f4
+    background-color: #ffffff
+    margin-bottom: 1.6rem
+    z-index: 2 !important
+    position: static
+    top: auto
+    bottom: auto
+    left: auto
+    width: auto
+  
+  &__selects
+    display: flex
+    max-width: 100%
+    width: 100%
+    justify-content: flex-start
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 5px 10px -4px rgba(15, 100, 131, 0.37)
+    border-radius: 10rem
+    border: 2px solid #f5f7fb
+    background-color: #ffffff
+    height: 4.8rem
+    padding: 0 2.4rem
+    &-icon
+      width: 1.6rem
+      height: 1.7rem
+      position: relative
+      top: 50%
+      margin-top: -.85rem
+      svg
+        fill: #98a5aa
+    &-wr
+      display: flex
+      justify-content: space-between
+    
+  &__btn
+    position: relative
+    z-index: 1
+    max-width: 16.8rem
+    width: 100%
+    button
+      height: 4.8rem
+      padding: 1.4rem
+      width: 100%
+      max-width: 16.8rem
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 5px 10px -4px rgba(15, 100, 131, 0.37)
+  &__top
+    padding: 1.6rem
+    
+    label
+      color: #abbfc7
+      font-size: 1.2rem
+      font-weight: 700
+      margin-bottom: 1rem
+      display: block
+      text-transform: uppercase
+  &__type
+    border-left: 2px solid #f5f7fb
+    *
+      font-size: 1.4rem
+    input
+      width: 18.5rem !important
+      border: none
+      
+  &__mood
+    border-left: 2px solid #f5f7fb
+    *
+      font-size: 1.4rem
+    input
+      width: 185px !important
+      border: none
+      
+  &__name
+    max-width: 38.5rem
+    width: 100%
+    border: none
+    padding-left: 3.5rem
+    font-size: 1.4rem
+    color: black
+    
+
+  &__filters
+    padding: 1.6rem
+    border-top: 2px solid #dee5f4
+    &-name
+      display: flex
+      justify-content: space-between
+      h3
+        color: #abbfc7
+        font-size: 1.2rem
+        font-weight: 700
+        margin-bottom: 1.0rem
+        text-transform: uppercase
+      p
+        color: #018edc
+        font-size: 1.2rem
+        font-weight: 400
+        cursor: pointer
+    &-items
+      flex-wrap: wrap
+      display: flex
+      justify-content: flex-start
+    &-item
+      border-radius: 3.2rem
+      background-color: #018edc
+      margin-right: 1.0rem
+      text-align: center
+      padding: 1.0rem 3.8rem 1.0rem 1.6rem
+      position: relative
+      margin-bottom: 1.2rem
+      p
+        color: #ffffff
+        font-family: Rubik
+        font-size: 1.4rem
+        margin: 0
+      span
+        cursor: pointer
+        width: 17px
+        height: 17px
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+        &::before,
+        &::after 
+          position: absolute
+          right: 8px
+          top: 50%
+          content: ' '
+          height: 12px
+          width: 2px
+          background-color: white
+          border-radius: 3px
+        &::before 
+          transform:  translateY(-50%) rotate(45deg) 
+        &::after 
+          transform: translateY(-50%) rotate(-45deg) 
+  &__playlist
+    padding: 1.6rem
+    border-radius: .5rem
+    border: 2px solid #dee5f4
+    background-color: #ffffff
+    margin-bottom: 4.0rem
+    z-index: -1
+    h3 
+      color: #abbfc7
+      font-size: 1.2rem
+      font-weight: 700
+      margin: 0
+      margin-bottom: 1.0rem
+      display: block
+      text-transform: uppercase
+  &__empty
+    background: #ffffff
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #abbfc7
+    text-align: center
+    height: 55vh
+    border-radius: 5px
+    &-text
+      margin-bottom: 0.8rem
+      h2
+        font-size: 18px
+      p
+        font-size: 14px
+  &__notFound
+    background: #ffffff
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #abbfc7
+    text-align: center
+    height: 55vh
+    border-radius: 5px
+    &-img
+      margin-bottom: 1.6rem
+    &-text
+      margin-bottom: 0.8rem
+      h2
+        font-size: 18px
+      p
+        font-size: 14px
+
+  .multiselect
+    min-height: auto
+    position: relative
+    &__single
+      padding-left: 4.6rem
+  .multiselect__tags
+    border: none
+    min-height: auto
+    padding: 1.3rem 4rem 0 .8rem
+  .multiselect__input
+    min-height: auto
+    line-height: initial
+    background: transparent
+  .multiselect__option--highlight
+    background: #6ac5f7
+    color: white
+    &:after
+      color: #696969
+      background: transparent
+  .multiselect__option--selected
+    background: #018edc !important
+    color: white
+
+    &:after
+      color: #696969
+      font-weight: 400
+      background: transparent
+
+
+  .multiselect__select
+    height: 4.4rem
+    position: absolute
+    left: 0
+  .multiselect__input
+    padding-left: 4.6rem !important
+  .multiselect__placeholder
+    display: none
+  .multiselect__select:before
+    content: ''
+    position: absolute
+    left: 20px
+    top: 50%
+    right: unset
+    transform: translateY(-50%)
+    border: 6px solid transparent
+    border-top: 8px solid #b0ced9
+    transition: 0.2s ease
+  .multiselect--active
+    .multiselect__select
+      transform: none
+      &:before
+        transform:  translateY(-100%) rotate(180deg)
+.search-body-svg
+  .stroke
+    stroke: #b0ced9
+.multiselect__single
+  background: transparent
+.dark .search
+  ::placeholder
+    color: white
+  &__panel
+    background: $color-dark-theme-blue
+    border: 2px solid $color-dark-theme-light-bg-blue
+  .search__playlist h3,
+  .search__filters-name h3,
+  .typo__label
+    font-weight: 400
+    color: $color-text-dark-theme-lightblue
+  &__filters
+    border-top: 2px solid $color-dark-theme-light-bg-blue
+  &__selects
+    background-color: $color-dark-theme-medium-dark-blue
+    border: 2px solid $color-dark-theme-light-bg-blue
+    input
+      font-family: Rubik, sans-serif
+      background-color: transparent
+      color: white
+    svg
+      fill: $color-blue
+  .multiselect__single
+    color: $color-white
+  .multiselect__tags
+    background: $color-dark-theme-medium-dark-blue
+  .multiselect__element
+    background: #0e2f68
+    color: white
+  .multiselect__content-wrapper
+    border-color: #6889c1
+  .multiselect__option
+    background: $color-dark-theme-medium-dark-blue
+    color: white
+  .multiselect__select:before
+    border-top: 8px solid #018edc
+  &__type,
+  &__mood
+    border-left: 2px solid $color-dark-theme-light-bg-blue
+  &__notFound,
+  &__empty,
+  &__playlist
+    background: $color-dark-theme-blue
+  .search-body-svg
+    margin-left: -1rem
+    .stroke
+      stroke: $color-text-dark-theme-lightblue
+  &__notFound,
+  &__empty
+    color: $color-text-dark-theme-lightblue
+  &__playlist
+    border: none
+    .playlist
+      &__name
+        h2
+          color: $color-white
+      &__text
+        color: $color-white
+
+
+
+.multiselect__option--selected
+  font-weight: 400
+

@@ -1,0 +1,252 @@
+.register
+  color: black
+  min-height: 100vh
+  background-image: linear-gradient(135deg, #f5f7fb 0%, #dfe5ef 100%)
+  &__top
+    max-width: 560px
+    width: 100%
+    padding-top: 4.7rem 
+    padding-bottom: 3.9rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: auto
+  &__logIn
+    color: #018edc
+    font-family: Rubik
+    font-size: 18px
+    font-weight: 400
+  &__content
+    max-width: 560px
+    width: 100%
+    padding: 3.2rem 2.4rem
+    background: white
+    margin: auto
+    border-radius: 5px
+    border: 2px solid #dee5f4
+  &__title
+    padding-left: 2.3rem
+    h2
+      font-family: "Rubik"
+      font-size: 36px
+      font-weight: 500
+  &__btn
+    text-align: center
+    margin-bottom: 16px
+    margin-top: 43px
+    button
+      height: 4.8rem
+      padding: 1.2rem 5.7rem
+      font-size: 18px
+  &__text
+    
+    text-align: center
+    margin-bottom: 62px
+    position: relative
+    &::after
+      position: absolute
+      content: ""
+      width: 100%
+      height: 2px
+      left: 0
+      bottom: -32px
+      background: #dee5f4
+    p
+      max-width: 340px
+      margin: auto
+      width: 100%
+      color: $color-text-black
+      font-size: 14px
+      font-weight: 400
+    a
+      color: $color-blue
+  &__bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 210px
+    margin: auto
+    width: 100%
+    h4
+      font-size: 18px
+      font-weight: 400
+    a
+      color: $color-blue
+      font-size: 18px
+  .site-input
+    margin-bottom: 10px
+    position: relative
+    label
+      color: #a1b0b6
+      font-size: 16px
+      font-weight: 400
+      padding-left: 2.3rem
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      transition: 0.3s ease
+    input
+      width: 100%
+      padding: 1.3rem 2.3rem 0.5rem 2.3rem
+      border: none
+      border-bottom: 2px solid #f5f7fb
+      color: $color-text-black
+      font-size: 18px
+      font-weight: 400
+      background: transparent
+
+  .input-item
+    position: relative
+    img, svg
+      position: absolute
+      right: 2.3rem
+      top: 50%
+      display: block
+      transform: translateY(-50%)
+    &-pass
+      svg, img
+        cursor: pointer
+  .input-error
+    padding: 16px
+    position: absolute
+    right: -270px
+    top: 50%
+    transform: translateY(-50%)
+    background: white
+    border-radius: 5px
+    border: 2px solid #f5f7fb
+    max-width: 256px
+    width: 100%
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 5px 10px -4px rgba(15, 100, 131, 0.37)
+    &::after
+      position: absolute
+      left: -12px
+      top: 50%
+      transform: translateY(-50%)
+      height: 0px
+      width: 0px
+      content: ''
+      border-top: 10px solid transparent
+      border-bottom: 10px solid transparent
+      border-right: 10px solid #f5f7fb
+  .password-progress
+    position: absolute
+    left: 0
+    width: 100%
+    span
+      display: block
+      width: 30%
+      height: 6px
+      background: #ffbd54
+    p
+      color: #ffbd54
+      font-size: 12px
+      padding-left: 2.3rem
+  
+  .success
+    input
+      border-color: blue
+  .error
+    input
+      border-color: #fd3a3a
+  .empty
+    label
+      top: 3px !important
+      font-size: 12px !important
+  .focus
+    input
+      border-color: #018edc
+  .Password
+    max-width: 100%
+    margin-top: -10px
+  .Password__strength-meter
+    height: 6px
+    border-radius: 0px
+    &::before,
+    &::after
+      display: none
+  
+  .login
+    &__register
+      padding-left: 2.3rem
+      margin-bottom: 27px
+      h2
+        color: $color-text-black
+        font-size: 36px
+        font-weight: 500
+        margin: 0
+    &__btn
+      text-align: center
+    &__btn2
+      text-align: center
+      margin-bottom: 65px
+      position: relative
+      &::after
+        position: absolute
+        content: ""
+        height: 2px
+        left: 2.3rem
+        right: 2.3rem
+        bottom: -32px
+        background: #dee5f4
+      span
+        font-size: 18px
+        font-weight: 400
+    &__forget
+      padding-left: 2.3rem
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 30px
+      p
+        padding-left: 5px
+        color: #018edc
+        font-size: 14px
+        font-weight: 400
+        cursor: pointer
+        user-select: none
+      input
+        opacity: 0
+        cursor: pointer
+      a
+        color: #018edc
+        font-size: 14px
+        font-weight: 400
+        
+         
+    &__check
+      background: #018edc
+      border-radius: 3px
+      width: 16px
+      height: 16px
+      position: absolute
+      text-align: center
+      cursor: pointer
+      svg
+        width: 10px
+        height: 16px
+        line-height: 16px
+    &__unCheck
+      background: transparent !important
+      border: 1px solid #018edc !important
+      border-radius: 3px !important
+      svg
+        width: 0
+
+.recover
+  &__text
+    padding: 0 2.3rem
+    margin-bottom: 32px
+    p
+      color: #23282a
+      font-size: 14px
+      font-weight: 400
+      line-height: 22px
+  &__inputs
+    margin-bottom: 48px
+  &__btn
+    text-align: center
+    span
+      font-size: 18px
+      font-weight: 400

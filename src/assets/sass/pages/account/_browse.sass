@@ -1,0 +1,101 @@
+.browse
+
+  &__content
+    padding: 2.4rem
+    background: $color-white
+    border-radius: .5rem
+
+.categories-title
+  height: 3.2rem
+  line-height: 3.2rem
+  color: $color-text-black
+  font-size: 2.6rem
+  margin: 0
+
+.categories
+  width: 100%
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+.category
+  flex: 1 0 calc(25% - 1.2rem)
+  max-width: calc(25% - 1.2rem)
+  margin-top: 1.6rem
+  display: flex
+  padding: 6% 1rem
+  border-radius: .6rem
+  flex-direction: row
+  justify-content: center
+  align-items: flex-end
+  text-align: center
+  cursor: pointer
+  transition: box-shadow .2s ease
+  +r($large)
+    padding: 4% 1rem
+
+  &:not(:nth-child(4n))
+    margin-right: 1.6rem
+
+  &:hover
+    box-shadow: 0 1.5rem 1.4rem -.6rem rgba(0, 0, 0, 0.3)
+
+  &__img
+    display: inline-block
+    max-width: 7rem
+    max-height: 6rem
+
+  &__title
+    display: block
+    margin-top: 2rem
+    height: 4.4rem
+    line-height: 2.2rem
+    color: $color-white
+    font-size: 1.8rem
+    letter-spacing: -.05rem
+
+.browse-category
+  padding: 3rem 0 5.5rem
+
+  &__content
+    padding: 1.6rem
+    border-radius: .5rem
+    background-color: $color-white
+
+  &-title
+    height: 4.4rem
+    line-height: 4.4rem
+    color: $color-text-black
+    font-size: 3.6rem
+    font-weight: 500
+    letter-spacing: -0.12rem
+    margin: 2.5rem 0 2rem
+
+  &__results
+    color: #abbfc7
+    font-size: 1.2rem
+    font-weight: 700
+    margin: 0 0 1rem
+    display: block
+    text-transform: uppercase
+
+.dark .browse
+
+  &__content
+    background: $color-dark-theme-blue
+
+  .categories-title
+    color: $color-white
+
+.dark .browse-category
+  &__content
+    background: $color-dark-theme-blue
+  &__results
+    font-weight: 400
+    color: $color-text-dark-theme-lightblue
+  &-title
+    color: $color-white
+  .playlist
+    &__name
+      h2
+        color: $color-white

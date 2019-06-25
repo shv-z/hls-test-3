@@ -1,0 +1,19 @@
+//@import "node_modules/font-awesome/scss/font-awesome";
+
+@import "config/config";
+@import "layout/layout";
+
+@import "components/global/player";
+@import "components/global/sidebar";
+@import "components/global/register";
+@import "components/global/addToSet";
+
+@import "pages/page-main";
+@import "pages/page-account";
+@import "pages/page-error";
+@import "pages/account/search.sass";
+@import "pages/account/playlist.sass";
+@import "pages/account/browse";
+@import "pages/account/my-sets";
+@import "pages/account/set-page";
+@import "pages/account/profile";

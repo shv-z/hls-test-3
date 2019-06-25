@@ -1,0 +1,128 @@
+.AddToSet
+  width: 100%
+  max-width: 54.4rem
+  z-index: 2
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 5px 10px -4px rgba(15, 100, 131, 0.37)
+  border-radius: 5px
+  border: 2px solid #f5f7fb
+  background-color: #fff
+  padding: 3.3rem 40px
+  position: relative
+  color: #23282a
+  &__title
+    margin-bottom: 12px
+    h1
+      margin: 0
+      font-size: 3.6rem
+      font-weight: 500
+  &__subtitle
+    margin-bottom: 24px
+    h1
+      margin-bottom: 0
+      font-size: 1.4rem
+      letter-spacing: -1.2px
+  &__playlists
+    ul
+      padding: 0
+      li
+        display: block
+        margin: 0
+        margin-bottom: 30px
+        font-size: 1.4rem
+        color: #018edc
+        cursor: cell
+      span
+        padding-left: 150px
+        cursor: no-drop
+  &__create
+    margin-bottom: 30px
+    position: relative
+    cursor: pointer
+    p
+      display: block
+      margin: 0
+      padding-left: 24px
+      font-size: 1.4rem
+      color: #018edc
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      width: 12px
+      height: 2px
+      background: #018edc
+      top: 40%
+      left: 0
+      transform: rotate(90deg)
+      border-radius: 5px
+    &::after
+      transform: rotate(0deg)
+  
+  &__btn
+    text-align: center
+    button
+      padding: 1.3rem 5.7rem
+      height: 4.8rem
+
+.NewSet
+  width: 100%
+  max-width: 54.4rem
+  z-index: 2
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 5px 10px -4px rgba(15, 100, 131, 0.37)
+  border-radius: 5px
+  border: 2px solid #f5f7fb
+  background-color: #fff
+  padding: 3.3rem 40px
+  position: relative
+  color: #23282a
+  &__title
+    margin-bottom: 32px
+    padding-left: 1.3rem
+    h1
+      margin: 0
+      font-size: 3.6rem
+      font-weight: 500
+
+
+  .site-input
+    margin-bottom: 10px
+    position: relative
+    label
+      color: #a1b0b6
+      font-size: 12px
+      font-weight: 400
+      padding-left: 1.3rem
+      position: absolute
+      left: 0
+      top: -10px
+      transform: translateY(-50%)
+      transition: 0.3s ease
+    input
+      width: 100%
+      padding: 0.5rem 2.3rem 1.3rem 1.3rem
+      border: none
+      border-bottom: 2px solid #f5f7fb
+      color: $color-text-black
+      font-size: 18px
+      font-weight: 400
+      background: transparent
+  .input-item
+    position: relative
+    img
+      position: absolute
+      right: 1.3rem
+      top: 50%
+      display: block
+      transform: translateY(-50%)
+  .focus
+    input
+      border-color: #018edc
+
+.dark
+  .AddToSet,
+  .NewSet
+    background: $color-dark-theme-blue
+    border: 2px solid $color-dark-theme-darker-blue
+    color: $color-white
+    input
+      color: $color-white

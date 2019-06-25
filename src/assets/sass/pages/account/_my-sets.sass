@@ -1,0 +1,125 @@
+.my-sets
+  &__new
+    position: relative
+    z-index: 1
+  &__content
+    background: white
+    padding: 1.6rem
+  &__subtitle
+    margin-bottom: 1rem
+    h3
+      color: #abbfc7
+      font-size: 12px
+      font-weight: 700
+      text-transform: uppercase
+
+  &__cards
+    display: flex
+    flex-wrap: wrap
+    margin: -0.8rem
+  &__card-wr
+    padding: .8rem
+    width: 100%
+    max-width: 50%
+    cursor: pointer
+  &__card
+    display: flex
+    padding: 3.2rem 4.0rem
+    background-color: #f5f7fb
+    border-radius: 15px
+    position: relative
+    padding-right: 33%
+    cursor: pointer
+    transition: 0.2s ease-in-out
+    &:hover
+      background-color: #e6eef1
+  &__play
+    margin-right: 2.7rem
+    cursor: pointer
+    svg
+      width: 2.9rem
+      path
+        fill: #018edc
+
+    &:hover
+      opacity: .8
+    &[disabled]
+      opacity: .4
+      &:hover
+        opacity: .4
+
+  &__right
+    width: 100%
+  &__name
+    margin-bottom: 6px
+    width: 100%
+    padding-right: 1rem
+    h2
+      margin: 0
+      line-height: 1.1
+      color: #23282a
+      font-size: 2.6rem
+      @include text-overflow
+
+  &__time
+    p
+      color: #a1b0b6
+      font-size: 14px
+      font-weight: 500
+      margin: 0
+
+  &__delete
+    cursor: pointer
+    position: absolute
+    right: 4.0rem
+    top: 50%
+    transform: translateY(-50%)
+    background: white
+    width: 3.6rem
+    height: 3.6rem
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: 0.2s ease
+    &:hover
+      background: #de3444
+      svg
+        path
+          fill: white
+          stroke: #de3444
+
+.dark .my-sets
+  &__content
+    background-color: $color-dark-theme-blue
+  &__subtitle
+    h3
+      color: $color-text-dark-theme-lightblue
+  &__card
+    background: $color-dark-theme-light-bg-blue
+    &:hover
+      background: $color-dark-theme-medium-dark-blue
+  &__play
+    svg
+      path
+        fill: #02b3ea
+  &__name
+    h2
+      color: $color-white
+  &__time
+    p
+      color: $color-text-dark-theme-lightblue
+  &__delete
+    background-color: #001f54
+    transition: 0.2s ease
+    svg
+      path
+        transition: 0.2s ease
+        stroke: #001f54
+        fill: #02b3ea
+    &:hover
+      background: #de3444
+      svg
+        path
+          fill: white
+          stroke: #de3444
